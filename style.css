@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.1);
+}
+
+.add-btn {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    background: #f0f1f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.todo-description {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #ff5252;
+    transform: scale(1.05);
+}
+
+.complete-btn {
+    background: #51cf66;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.complete-btn:hover {
+    background: #40c057;
+    transform: scale(1.05);
+}
