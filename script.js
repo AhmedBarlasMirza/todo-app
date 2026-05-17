@@ -102,18 +102,24 @@ async function deleteTodo(id) {
 // Toggle todo completion status
 async function toggleTodo(id, currentStatus) {
     try {
+        // Get the current todo data first
+        const getTodoResponse = await fetch(`${API_URL}/${id}`);
+        const todo = await getTodoResponse.json();
+        
         const response = await fetch(`${API_URL}/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
+                title: todo.title,
+                description: todo.description,
                 completed: !currentStatus
             })
         });
         
         if (response.ok) {
-            loadTodos(); // Refresh the list
+            loadTodos();
         }
     } catch (error) {
         console.error('Error updating todo:', error);
